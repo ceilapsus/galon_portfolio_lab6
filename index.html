@@ -4,33 +4,52 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-  <title>My Portfolio</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+  <title>Mata ni Ibad</title>
 </head>
 
 <body id="top">
 
     <style>
     .navbar .nav-link { color: #000000 !important; }
-    .navbar .nav-link:hover { color: #23939d !important; }
+    .navbar .nav-link:hover { color: #ff7e3e !important; }
     .navbar .nav-link:active,
-    .navbar .nav-link.active { color: #29becc !important; }
+    .navbar .nav-link.active { color: #ff5500 !important; }
     .dropdown-btn {
     color: #000000 !important;
     background: transparent !important;
     border: none !important;
     }
-    .dropdown-btn:hover { color: #23939d !important; }
+    .dropdown-btn:hover { color: #ff5500 !important; }
     .dropdown-btn:active,
-    .dropdown-btn.active { color: #29becc !important; }
+    .dropdown-btn.active { color: #ff5500 !important; }
     .dropdown-item { color:#000 !important; }
-    .dropdown-item:hover { color:#23939d !important; }
-    .dropdown-item:active { color:#29becc !important; background-color: transparent !important; }
+    .dropdown-item:hover { color:#ff5500 !important; }
+    .dropdown-item:active { color:#ff5500 !important; background-color: transparent !important; }
+    .card-img-top { height: 220px; object-fit: cover; } 
+    .card { transition: transform 0.2s ease, box-shadow 0.2s ease; }
+    .card:hover { transform: translateY(-6px); box-shadow: 0 12px 24px rgba(0,0,0,0.15); }
+    #certifications .bi { color: #ff5500; }
+    .section-title { position: relative;text-align: center; }
+    .section-title span { position: relative; z-index: 2; color: black; }
+    .section-title::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 100vw;
+    height: 100px;
+    background-color: whitesmoke;
+    z-index: 1;
+    }   
     </style>
 
     <nav class="navbar navbar-expand-lg navbar-light fixed-top" style="color: BLACK; background-color: whitesmoke;">
       <div class="container">
         <img src="images/icon.jpg" width="30" height="30" class="d-inline-block align-text-top" style="padding-right:2px">
-            <a class="navbar-brand mx-auto" href="#">My Portfolio</a>
+            <a class="navbar-brand mx-auto" href="#">Mata ni Ibad</a>
             <div class="d-lg-none">
                 <div class="dropdown">
                     <button class="btn p-0 icon-btn dropdown-btn" type="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -50,6 +69,8 @@
                 <ul class="navbar-nav mx-auto">
                     <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#certifications">Certifications</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
                     <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
                     <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
                 </ul>
@@ -64,7 +85,7 @@
             <div class="col-md-6 text-center text-md-start">
                 <h1 class="display-1">Hi, I'm Claudee</h1>
                 <p class="lead">--A Beginner Web Developer--</p>
-                <a href="#projects" class="btn btn-light btn-lg mt-3">View My Work</a>
+                <a href="#projects" class="btn btn-light btn-lg mt-3">View Projects</a>
             </div>
             <div class="col-md-6 text-center">
             </div>
@@ -72,24 +93,24 @@
     </div>
   </section>
 
-  <section id="services" class="section-padding" style="background-color: #ffffff; padding: 100px 0;" >
+  <section id="services" class="section-padding" style="background-color: #ffffff; padding: 50px 0;" >
     <div class="container">
-        <h2 class="text-center mb-5">My Services</h2>
+        <h2 class="text-center mb-5 section-title"><span>My Services</span></h2>
         <div class="row text-center">
             <div class="col-md-4">
-                <div class="card p-4">
+                <div class="card p-4 shadow-sm">
                     <h4>Web Design</h4>
                     <p>Simple and clean website designs.</p>
                 </div>
             </div>
             <div class="col-md-4">
-                <div class="card p-4">
+                <div class="card p-4 shadow-sm">
                     <h4>Frontend Development</h4>
                     <p>Responsive layouts using Bootstrap.</p>
                 </div>
             </div>
             <div class="col-md-4">
-                <div class="card p-4">
+                <div class="card p-4 shadow-sm">
                     <h4>Student Projects</h4>
                     <p>Beginner-friendly web projects.</p>
                 </div>
@@ -98,12 +119,60 @@
     </div>
   </section>
 
-  <section id="projects" class="section-padding" style="background-color: #ffffff; padding: 100px 0;" >
+  <section id="certifications" class="section-padding" style="padding: 50px 0;">
     <div class="container">
-        <h2 class="text-center mb-5">My Projects</h2>
-        <div class="row">
+        <h2 class="text-center mb-5 section-title"><span>Certifications</span></h2>
+        <div class="row text-center">
             <div class="col-md-4">
-                <div class="card">
+                <div class="card p-4 h-100 shadow-sm">
+                    <i class="bi bi-emoji-smile-upside-down fs-1 mb-3"></i>
+                    <h5>Certiport Java Developer</h5>
+                    <p>Fundamentals, Object-Oriented Programming, Debugging & Compiling</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card p-4 h-100 shadow-sm">
+                    <i class="bi bi-emoji-tear fs-1 mb-3"></i>
+                    <h5>Sololearn Python Developer</h5>
+                    <p>Functional Programming, Object-Oriented Programming, Debugging</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card p-4 h-100 shadow-sm">
+                    <i class="bi bi-emoji-sunglasses fs-1 mb-3"></i>
+                    <h5>CodeChum National Programming Challenge 2025</h5>
+                    <p>Participant :D</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    </section>
+
+    <section id="education" class="section-padding" style="padding: 50px 0;">
+        <div class="container">
+            <h2 class="text-center mb-5 section-title"><span>Education</span></h2>
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <div class="card p-4 h-100 shadow-sm">
+                        <h4>Bachelor of Science in Information Technology</h4>
+                        <p class="mb-1"><strong>University of Mindanao</strong></p>
+                        <p class="text-muted">2023 – Present</p>
+                        <p>
+                            Focused on web development, programming fundamentals,
+                            networking concepts, and UI/UX design principles.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+  <section id="projects" class="section-padding" style="background-color: #ffffff; padding: 50px 0;" >
+    <div class="container">
+        <h2 class="text-center mb-5 section-title"><span>My Projects</span></h2>
+        <div class="row text-center g-4">
+            <div class="col-md-4">
+                <div class="card h-100 shadow-sm">
                     <img src="images/loginstock.png" class="card-img-top">
                     <div class="card-body">
                         <h5>Login & Dashboard System</h5>
@@ -112,7 +181,7 @@
                 </div>
             </div>
             <div class="col-md-4">
-                <div class="card">
+                <div class="card h-100 shadow-sm">
                     <img src="images/apruvetlogo.png" class="card-img-top">
                     <div class="card-body">
                         <h5>Apruvet</h5>
@@ -121,7 +190,7 @@
                 </div>
             </div>
             <div class="col-md-4">
-                <div class="card">
+                <div class="card h-100 shadow-sm">
                     <img src="images/kaldea.jpg" class="card-img-top">
                     <div class="card-body">
                         <h5>Kaldea Emergencies</h5>
@@ -133,7 +202,7 @@
     </div>
   </section>
 
-  <section id="contact" class="section-padding" style="background-color: #ffffff; padding: 100px 0;" >
+  <section id="contact" class="section-padding" style="background-color: #ffffff; padding: 50px 0;" >
     <div class="container">
         <h2 class="text-center mb-5">Contact Me</h2>
         <div class="row justify-content-center">
@@ -142,7 +211,7 @@
                     <input type="text" class="form-control mb-3" placeholder="Name">
                     <input type="email" class="form-control mb-3" placeholder="Email">
                     <textarea class="form-control mb-3" rows="4" placeholder="Message"></textarea>
-                    <button class="btn btn-primary w-100">Send</button>
+                    <button class="btn w-100" style="background-color: #ff5500; color:white;">Send</button>
                 </form>
             </div>
         </div>
