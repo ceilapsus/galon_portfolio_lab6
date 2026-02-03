@@ -31,6 +31,7 @@
     .card { transition: transform 0.2s ease, box-shadow 0.2s ease; }
     .card:hover { transform: translateY(-6px); box-shadow: 0 12px 24px rgba(0,0,0,0.15); }
     #certifications .bi { color: #ff5500; }
+    #footer .bi { color: #ff5500}
     .section-title { position: relative;text-align: center; }
     .section-title span { position: relative; z-index: 2; color: black; }
     .section-title::before {
@@ -43,7 +44,14 @@
     height: 100px;
     background-color: whitesmoke;
     z-index: 1;
-    }   
+    }
+    .parallax {
+    background-image: url("images/kaldea.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    }
     </style>
 
     <nav class="navbar navbar-expand-lg navbar-light fixed-top" style="color: BLACK; background-color: whitesmoke;">
@@ -95,7 +103,7 @@
 
   <section id="services" class="section-padding" style="background-color: #ffffff; padding: 50px 0;" >
     <div class="container">
-        <h2 class="text-center mb-5 section-title"><span>My Services</span></h2>
+        <h2 class="text-center mb-5 section-title parallax"><span>My Services</span></h2>
         <div class="row text-center">
             <div class="col-md-4">
                 <div class="card p-4 shadow-sm">
@@ -218,11 +226,18 @@
     </div>
   </section>
 
-<footer class="bg-dark text-white py-4">
-  <div class="text-center">
-    <p class="mb-0">© 2026 Claudee Galon | All Rights Reserved</p>
-  </div>
+<footer id="footer"class="text-center py-4 bg-light text-dark">
+    <div class="container">
+        <div class="mb-3">
+            <a href="#" class="me-3 fs-4"><i class="bi bi-facebook"></i></a>
+            <a href="#" class="me-3 fs-4"><i class="bi bi-github"></i></a>
+            <a href="#" class="me-3 fs-4"><i class="bi bi-linkedin"></i></a>
+            <a href="#" class="fs-4"><i class="bi bi-envelope-fill"></i></a>
+        </div>
+        <p class="mb-0">© 2026 Claudee Galon / Mata ni Ibad | All Rights Reserved</p>
+    </div>
 </footer>
+
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
